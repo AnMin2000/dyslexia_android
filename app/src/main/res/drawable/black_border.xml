@@ -1,0 +1,18 @@
+<!-- res/drawable/black_border.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 배경 색상 설정 -->
+    <item android:drawable="@android:color/transparent" />
+
+    <!-- 테두리 설정 -->
+    <item
+        android:left="2dp"
+        android:right="2dp"
+        android:top="2dp"
+        android:bottom="2dp">
+        <shape android:shape="rectangle">
+            <stroke
+                android:width="0.5dp"
+                android:color="#000000" /> <!-- 테두리 색상 및 두께 설정 -->
+        </shape>
+    </item>
+</layer-list>

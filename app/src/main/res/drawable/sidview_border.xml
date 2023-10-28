@@ -1,0 +1,4 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <stroke android:color="#6D6868" android:width="3dp" /> <!-- 테두리 색상 및 두께 (검은색, 1dp 예시) -->
+    <corners android:radius="4dp" /> <!-- 모서리의 둥근 정도 (4dp 예시) -->
+</shape>

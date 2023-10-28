@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SummarizeActivity">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="246dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/a12"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/OCRTextView"
+        android:layout_width="348dp"
+        android:layout_height="160dp"
+        android:background="@drawable/textview_border"
+        android:hint="오늘은 아침에 일어나서 좋은 날씨를 확인했어요. 밖으로 나 가면서 상쾌한 공기를 마시며 산책을 즐겼어요.
+그런 다음 커 피 한 잔을 마시면서 아침 뉴스를 읽었어요.
+일정을 확인하고 회의에 참석하기 위해 집을 나왔어요. 회의에서는 프로젝트 진행 상황을 논의하고 다음 단계 계획을 세웠어요.
+점심 시간 에는 동료들과 함께 식사를 하면서 이야기를 나닛어요. 오후 에는 업무에 집중하면서 업무를 처리했고, 퇴근 후에는 운동 을 하러 체육관에 갔어요.
+저녁에는 가족과 함께 맛있는 저녁 식사를 하며 하루를 마무리했어요."
+        android:textColorHint="#020202"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.535" />
+
+    <TextView
+        android:id="@+id/summarizeTextView"
+        android:layout_width="350dp"
+        android:layout_height="165dp"
+        android:background="@drawable/textview_border"
+        android:hint="오늘은 좋은 날씨로 시작해 산책, 커피, 아침 뉴스를 즐겼고, 회의에서 프로젝트 논의하고 계획을 세웠다.
+점심엔 동료와 식사하며 이야기하고, 오후에는 업무에 집중하고 체육관에서 운동했다. 저녁엔 가족과 맛있는 식사로 하루를 마무리했다."
+        android:textColorHint="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.877"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/soundButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FF5722"
+        android:text="소리 내어 읽기"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.983"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/noButton"
+        android:layout_width="443dp"
+        android:layout_height="21dp"
+        android:backgroundTint="#FF5722"
+        android:text="소리 내어 읽기"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.386"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
