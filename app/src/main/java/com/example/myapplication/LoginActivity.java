@@ -5,10 +5,12 @@ import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.Switch;
@@ -26,7 +28,7 @@ public class LoginActivity extends AppCompatActivity {
     private String pw = "";
 
     EditText userId, userPassword, SignUpView, SearchView;
-    Switch switch1;
+    CheckBox checkBox;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,18 +41,22 @@ public class LoginActivity extends AppCompatActivity {
         userPassword = findViewById(R.id.userPassword);
         SignUpView = findViewById(R.id.SignUpView);
         SearchView = findViewById(R.id.SearchView);
-        switch1 = findViewById(R.id.switch1);
+        checkBox = findViewById(R.id.checkbox);
 
-        switch1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
-                    // 스위치가 켜질 때 다음 화면으로 이동하도록 처리
-                    Intent intent = new Intent(LoginActivity.this, PictureActivity.class);
-                    startActivity(intent);
+                    // 체크되었을 때 배경 색상을 검은색으로 변경
+                    //checkBox.setBackgroundColor(Color.BLACK);
+                } else {
+                    // 체크 해제되었을 때 배경 색상을 원래 색상으로 변경 (예를 들어, 흰색)
+                    //checkBox.setBackgroundColor(Color.WHITE); // 변경하고 싶은 색상으로 수정
                 }
             }
         });
+
+
 
         SignUpView.setOnClickListener(new View.OnClickListener() {
             @Override
