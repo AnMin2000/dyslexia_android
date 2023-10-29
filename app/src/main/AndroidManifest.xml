@@ -18,7 +18,7 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".Login2Activity"
+            android:name=".SignUpActivity2"
             android:exported="false" />
         <activity
             android:name=".SummarizeActivity"

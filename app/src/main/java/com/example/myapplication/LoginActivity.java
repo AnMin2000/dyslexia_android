@@ -28,7 +28,7 @@ public class LoginActivity extends AppCompatActivity {
     private String pw = "";
 
     EditText userId, userPassword, SignUpView, SearchView;
-    CheckBox checkBox;
+    Switch switch1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,17 +41,15 @@ public class LoginActivity extends AppCompatActivity {
         userPassword = findViewById(R.id.userPassword);
         SignUpView = findViewById(R.id.SignUpView);
         SearchView = findViewById(R.id.SearchView);
-        checkBox = findViewById(R.id.checkbox);
+        switch1 = findViewById(R.id.switch1);
 
-        checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        switch1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
-                    // 체크되었을 때 배경 색상을 검은색으로 변경
-                    //checkBox.setBackgroundColor(Color.BLACK);
-                } else {
-                    // 체크 해제되었을 때 배경 색상을 원래 색상으로 변경 (예를 들어, 흰색)
-                    //checkBox.setBackgroundColor(Color.WHITE); // 변경하고 싶은 색상으로 수정
+                    // 스위치가 켜질 때 다음 화면으로 이동하도록 처리
+                    Intent intent = new Intent(LoginActivity.this, SignUpActivity2.class);
+                    startActivity(intent);
                 }
             }
         });
