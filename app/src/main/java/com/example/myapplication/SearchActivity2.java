@@ -13,7 +13,7 @@ import android.widget.Button;
 public class SearchActivity2 extends AppCompatActivity {
 
     Button button;
-    String pw;
+
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +39,7 @@ public class SearchActivity2 extends AppCompatActivity {
                 dialog.dismiss();
 
                 // '확인' 버튼을 클릭하면 다음 화면으로 이동
-                Intent intent = new Intent(SearchActivity2.this, LoginActivity.class);
+                Intent intent = new Intent(SearchActivity2.this, LoginActivity2.class);
                 startActivity(intent);
             }
         });

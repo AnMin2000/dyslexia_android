@@ -13,6 +13,7 @@ import android.os.Bundle;
 import android.speech.RecognizerIntent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Switch;
@@ -28,24 +29,33 @@ public class LoginActivity2 extends AppCompatActivity {
 
     TextView userId, userPassword;
     ImageView mike, mike2;
-
+    Button button;
     int num;
-
+    Switch switch1;
     @SuppressLint({"MissingInflatedId", "WrongViewCast"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login2);
 
-        Button button = findViewById(R.id.button);
-
+        button = findViewById(R.id.button);
         SignUpView = findViewById(R.id.SignUpView);
         SearchView = findViewById(R.id.SearchView);
         userId = findViewById(R.id.userId);
         userPassword = findViewById(R.id.userPassword);
         mike = findViewById(R.id.mike);
         mike2 = findViewById(R.id.mike2);
-
+        switch1 = findViewById(R.id.switch1);
+        switch1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (!isChecked) {
+                    // 스위치가 켜질 때 다음 화면으로 이동하도록 처리
+                    Intent intent = new Intent(LoginActivity2.this, LoginActivity.class);
+                    startActivity(intent);
+                }
+            }
+        });
         mike.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -79,8 +89,8 @@ public class LoginActivity2 extends AppCompatActivity {
         });
 
         button.setOnClickListener(view -> {
-
-
+            Intent intent = new Intent(LoginActivity2.this,CameraActivity2.class); // cameraActivity
+            startActivity(intent);
         });
 
     }
