@@ -18,6 +18,9 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".CameraActivity2"
+            android:exported="false" />
+        <activity
             android:name=".SearchActivity2"
             android:exported="false" />
         <activity
@@ -33,7 +36,7 @@
             android:name=".PictureActivity"
             android:exported="false" />
         <activity
-            android:name=".test"
+            android:name=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".SearchActivity"
@@ -51,7 +54,7 @@
             android:name=".CameraActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".LoginActivity2"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
