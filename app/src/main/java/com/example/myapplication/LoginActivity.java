@@ -43,25 +43,10 @@ public class LoginActivity extends AppCompatActivity {
         SearchView = findViewById(R.id.SearchView);
         switch1 = findViewById(R.id.switch1);
 
-        switch1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked) {
-                    // 스위치가 켜질 때 다음 화면으로 이동하도록 처리
-                    Intent intent = new Intent(LoginActivity.this, SignUpActivity2.class);
-                    startActivity(intent);
-                }
-            }
-        });
-
-
-
         SignUpView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                userId.setText(null);
-                userPassword.setText(null);
-                Intent intent = new Intent(LoginActivity.this,SignUpActivity.class); // cameraActivity
+                Intent intent = new Intent(LoginActivity.this,SignUpActivity2.class); // cameraActivity
                 startActivity(intent);
             }
         });
@@ -70,24 +55,47 @@ public class LoginActivity extends AppCompatActivity {
         SearchView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                userId.setText(null);
-                userPassword.setText(null);
-                Intent intent = new Intent(LoginActivity.this,SearchActivity.class); // cameraActivity
+                Intent intent = new Intent(LoginActivity.this,SearchActivity2.class); // cameraActivity
                 startActivity(intent);
             }
         });
 
         button.setOnClickListener(view -> {
-            id = userId.getText().toString();
-            pw = userPassword.getText().toString();
-            User user = new User();
-            user.setId(id);
-            user.setPassword(pw);
-           // System.out.println(user.getId());
-            Log.d("BUTTON CLICKED", "id: " + user.getId() + ", pw: " + user.getPassword());
-            login(user);
+
 
         });
+//        SignUpView.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                userId.setText(null);
+//                userPassword.setText(null);
+//                Intent intent = new Intent(LoginActivity.this,SignUpActivity.class); // cameraActivity
+//                startActivity(intent);
+//            }
+//        });
+//
+//        // loginbutton 클릭 시 입력 막기
+//        SearchView.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                userId.setText(null);
+//                userPassword.setText(null);
+//                Intent intent = new Intent(LoginActivity.this,SearchActivity.class); // cameraActivity
+//                startActivity(intent);
+//            }
+//        });
+//
+//        button.setOnClickListener(view -> {
+//            id = userId.getText().toString();
+//            pw = userPassword.getText().toString();
+//            User user = new User();
+//            user.setId(id);
+//            user.setPassword(pw);
+//           // System.out.println(user.getId());
+//            Log.d("BUTTON CLICKED", "id: " + user.getId() + ", pw: " + user.getPassword());
+//            login(user);
+//
+//        });
     }
 
     private void login(User user) {

@@ -36,12 +36,12 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class CameraActivity extends AppCompatActivity {
-    private ImageButton btn_picture, album;
+    private ImageView btn_picture, album;
 
     File photoFile;
     String timeStamp, fileName;
 
-    @SuppressLint("MissingInflatedId")
+    @SuppressLint({"MissingInflatedId", "WrongViewCast"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

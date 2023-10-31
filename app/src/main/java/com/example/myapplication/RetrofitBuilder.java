@@ -22,7 +22,7 @@ public class RetrofitBuilder {
                 .build();
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://172.29.196.235:8080/") // 요청 보내는 API 서버 URL (끝에 /가 있어야 함)
+                .baseUrl("http://172.29.209.36:8080/") // 요청 보내는 API 서버 URL (끝에 /가 있어야 함)
                 .addConverterFactory(GsonConverterFactory.create(gson)) // Gson을 사용하여 역직렬화
                 .client(okHttpClient) // OkHttpClient 설정을 사용
                 .build();

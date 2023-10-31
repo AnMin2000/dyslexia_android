@@ -20,19 +20,7 @@
         app:layout_constraintVertical_bias="0.143"
         tools:ignore="MissingConstraints" />
 
-    <ImageButton
-        android:id="@+id/language"
-        android:layout_width="61dp"
-        android:layout_height="48dp"
-        android:layout_gravity="center_horizontal"
-        android:background="@android:color/transparent"
-        android:src="@drawable/language"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.437"
-        tools:ignore="MissingConstraints" />
+
 
     <TextView
         android:layout_width="95dp"
@@ -60,34 +48,42 @@
         app:layout_constraintVertical_bias="0.519"
         tools:ignore="MissingConstraints" />
 
-    <ImageButton
+    <ImageView
         android:id="@+id/btn_picture"
-        android:layout_width="61dp"
-        android:layout_height="48dp"
-        android:layout_gravity="center_horizontal"
-        android:background="@android:color/transparent"
+        android:layout_width="131dp"
+        android:layout_height="67dp"
         android:src="@drawable/camera"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.923"
+        app:layout_constraintVertical_bias="0.975"
         tools:ignore="MissingConstraints" />
 
-    <ImageButton
+    <ImageView
         android:id="@+id/album"
-        android:layout_width="61dp"
-        android:layout_height="48dp"
-        android:layout_gravity="center_horizontal"
-        android:background="@android:color/transparent"
+        android:layout_width="144dp"
+        android:layout_height="67dp"
         android:src="@drawable/album"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.891"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.922"
+        app:layout_constraintVertical_bias="0.975"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:layout_width="108dp"
+        android:layout_height="54dp"
+        android:src="@drawable/language"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.432"
         tools:ignore="MissingConstraints" />
 
 
